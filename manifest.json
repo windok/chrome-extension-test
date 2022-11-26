@@ -1,0 +1,13 @@
+{
+  "name": "windok-automation",
+  "version": "1.0",
+  "description": "Automatically Do script",
+  "content_scripts": [
+    {
+      "matches": ["https://registration.mfa.gov.ua/*"],
+      "run_at": "document_end",
+      "js": ["reloader.js"]
+    }
+  ],
+  "manifest_version": 2
+}
