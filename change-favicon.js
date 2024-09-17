@@ -15,7 +15,10 @@ const setIcon = () => {
 
   const icons = {
     'jira.internal.dnanexus.com': projectIcon ?? 'https://wac-cdn-bfldr.atlassian.com/K3MHR9G8/at/hmv84b686k38wqh7tpwrfkcv/jira-logo.svg',
-    'confluence.internal.dnanexus.com': 'https://wac-cdn-bfldr.atlassian.com/K3MHR9G8/at/wfr836ffrrh5b7qs43qhgkv/confluence-logo.svg'
+    'confluence.internal.dnanexus.com': 'https://wac-cdn-bfldr.atlassian.com/K3MHR9G8/at/wfr836ffrrh5b7qs43qhgkv/confluence-logo.svg',
+    // fix for dark theme
+    'github.com': 'https://github.githubassets.com/favicons/favicon-dark.png',
+    'docs.github.com': 'https://github.com/fluidicon.png'
   }
 
 
