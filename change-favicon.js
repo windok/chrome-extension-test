@@ -18,12 +18,16 @@ const setIcon = () => {
     'confluence.internal.dnanexus.com': 'https://wac-cdn-bfldr.atlassian.com/K3MHR9G8/at/wfr836ffrrh5b7qs43qhgkv/confluence-logo.svg',
     // fix for dark theme
     'github.com': 'https://github.githubassets.com/favicons/favicon-dark.png',
-    'docs.github.com': 'https://github.com/fluidicon.png'
+    'docs.github.com': 'https://github.com/fluidicon.png',
+
+    'docs.google.com/document/': chrome.runtime.getURL("gdocs.png"),
+    'docs.google.com/spreadsheets/': chrome.runtime.getURL("gspreadsheet.png"),
   }
 
-
   for (const host of Object.keys(icons)) {
-    if (location.host.includes(host)) {
+    const pageUrl = host.includes('/') ? location.href : location.host;
+
+    if (pageUrl.includes(host)) {
       link.href = icons[host];
     }
   }

@@ -14,5 +14,9 @@
       "js": ["change-favicon.js"]
     }
   ],
-  "manifest_version": 2
+  "web_accessible_resources": [{
+    "resources": ["*.png"],
+    "matches": ["<all_urls>"]
+  }],
+  "manifest_version": 3
 }
